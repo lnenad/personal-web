@@ -1,10 +1,11 @@
 package methods
 
 import (
+	"log"
+
 	"github.com/kabukky/journey/database"
 	"github.com/kabukky/journey/date"
 	"github.com/kabukky/journey/structure"
-	"log"
 )
 
 func SavePost(p *structure.Post) error {
@@ -25,7 +26,7 @@ func SavePost(p *structure.Post) error {
 		}
 	}
 	// Insert post
-	postId, err := database.InsertPost(p.Title, p.Slug, p.Markdown, p.Html, p.IsFeatured, p.IsPage, p.IsPublished, p.MetaDescription, p.Image, *p.Date, p.Author.Id)
+	postId, err := database.InsertPost(p.Title, p.Slug, p.Tagline, p.Markdown, p.Html, p.IsFeatured, p.IsPage, p.IsPublished, p.MetaDescription, p.Image, *p.Date, p.Author.Id)
 	if err != nil {
 		return err
 	}
@@ -62,7 +63,7 @@ func UpdatePost(p *structure.Post) error {
 		}
 	}
 	// Update post
-	err := database.UpdatePost(p.Id, p.Title, p.Slug, p.Markdown, p.Html, p.IsFeatured, p.IsPage, p.IsPublished, p.MetaDescription, p.Image, *p.Date, p.Author.Id)
+	err := database.UpdatePost(p.Id, p.Title, p.Slug, p.Tagline, p.Markdown, p.Html, p.IsFeatured, p.IsPage, p.IsPublished, p.MetaDescription, p.Image, *p.Date, p.Author.Id)
 	if err != nil {
 		return err
 	}

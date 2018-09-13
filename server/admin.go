@@ -29,6 +29,7 @@ type JsonPost struct {
 	Id              int64
 	Title           string
 	Slug            string
+	Tagline         string
 	Markdown        string
 	Html            string
 	IsFeatured      bool
@@ -305,7 +306,7 @@ func patchApiPostHandler(w http.ResponseWriter, r *http.Request, _ map[string]st
 			postSlug = post.Slug
 		}
 		currentTime := date.GetCurrentTime()
-		*post = structure.Post{Id: json.Id, Title: []byte(json.Title), Slug: postSlug, Markdown: []byte(json.Markdown), Html: conversion.GenerateHtmlFromMarkdown([]byte(json.Markdown)), IsFeatured: json.IsFeatured, IsPage: json.IsPage, IsPublished: json.IsPublished, MetaDescription: []byte(json.MetaDescription), Image: []byte(json.Image), Date: &currentTime, Tags: methods.GenerateTagsFromCommaString(json.Tags), Author: &structure.User{Id: userId}}
+		*post = structure.Post{Id: json.Id, Title: []byte(json.Title), Slug: postSlug, Tagline: json.Tagline, Markdown: []byte(json.Markdown), Html: conversion.GenerateHtmlFromMarkdown([]byte(json.Markdown)), IsFeatured: json.IsFeatured, IsPage: json.IsPage, IsPublished: json.IsPublished, MetaDescription: []byte(json.MetaDescription), Image: []byte(json.Image), Date: &currentTime, Tags: methods.GenerateTagsFromCommaString(json.Tags), Author: &structure.User{Id: userId}}
 		err = methods.UpdatePost(post)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -762,6 +763,7 @@ func postToJson(post *structure.Post) *JsonPost {
 	jsonPost.Id = post.Id
 	jsonPost.Title = string(post.Title)
 	jsonPost.Slug = post.Slug
+	jsonPost.Tagline = post.Tagline
 	jsonPost.Markdown = string(post.Markdown)
 	jsonPost.Html = string(post.Html)
 	jsonPost.IsFeatured = post.IsFeatured

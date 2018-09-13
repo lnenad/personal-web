@@ -21,6 +21,7 @@ var stmtInitialization = `CREATE TABLE IF NOT EXISTS
 		uuid				varchar(36) NOT NULL,
 		title				varchar(150) NOT NULL,
 		slug				varchar(150) NOT NULL,
+		tagline				varchar(150) NOT NULL,
 		markdown			text,
 		html				text,
 		image				text,

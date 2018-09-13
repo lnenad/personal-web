@@ -179,7 +179,7 @@ adminApp.controller('CreateCtrl', function ($scope, $http, $sce, $location, shar
   //change the navbar according to controller
   $scope.navbarHtml = $sce.trustAsHtml('<ul class="nav navbar-nav"><li><a href="#/">Content</a></li><li class="active"><a href="#/create/">New Post<span class="sr-only">(current)</span></a></li><li><a href="#/settings/">Settings</a></li><li><a href="logout/" class="logout">( Log Out )</a></li></ul>');
   $scope.shared = sharingService.shared;
-  $scope.shared.post = {Title: 'New Post', Slug: '', Markdown: 'Write something!', IsPublished: false, Image: '', Tags: ''}
+  $scope.shared.post = {Title: 'New Post', Slug: '', Markdown: 'Write something!', IsPublished: false, Tagline: '', Image: '', Tags: ''}
   $scope.change = function() {
     document.getElementById('html-div').innerHTML = '<h1>' + $scope.shared.post.Title + '</h1><br>' + converter.makeHtml($scope.shared.post.Markdown);
     //resize the markdown textarea
@@ -227,7 +227,7 @@ adminApp.controller('EmptyModalCtrl', function ($scope, $modal, $http, sharingSe
   $scope.open = function (size, callingFrom) {
     if (callingFrom == 'post-options') {
       var modalInstance = $modal.open({
-        templateUrl: 'post-options-modal.tpl',
+        templateUrl: 'post-options-modal.html',
         controller: 'EmptyModalInstanceCtrl',
         size: size
       });
