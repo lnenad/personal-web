@@ -2,17 +2,18 @@ package templates
 
 import (
 	"bytes"
+	"html"
+	"log"
+	"net/url"
+	"strconv"
+	"strings"
+
 	"github.com/kabukky/journey/conversion"
 	"github.com/kabukky/journey/database"
 	"github.com/kabukky/journey/date"
 	"github.com/kabukky/journey/plugins"
 	"github.com/kabukky/journey/structure"
 	"github.com/kabukky/journey/structure/methods"
-	"html"
-	"log"
-	"net/url"
-	"strconv"
-	"strings"
 )
 
 // Helper fuctions
@@ -535,7 +536,7 @@ func tagsFunc(helper *structure.Helper, values *structure.RequestData) []byte {
 				buffer.WriteString(separator)
 			}
 			if makeLink {
-				buffer.WriteString("<a href=\"")
+				buffer.WriteString("<a class='meta-tag' href=\"")
 				buffer.WriteString("/tag/")
 				buffer.WriteString(tag.Slug)
 				buffer.WriteString("/\">")
@@ -612,6 +613,11 @@ func titleFunc(helper *structure.Helper, values *structure.RequestData) []byte {
 func contentFunc(helper *structure.Helper, values *structure.RequestData) []byte {
 	// TODO: is content always unescaped? seems like it...
 	return values.Posts[values.CurrentPostIndex].Html
+}
+
+func taglineFunc(helper *structure.Helper, values *structure.RequestData) []byte {
+	// TODO: is content always unescaped? seems like it...
+	return []byte(values.Posts[values.CurrentPostIndex].Tagline)
 }
 
 func excerptFunc(helper *structure.Helper, values *structure.RequestData) []byte {

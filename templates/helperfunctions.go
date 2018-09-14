@@ -42,6 +42,7 @@ var helperFuctions = map[string]func(*structure.Helper, *structure.RequestData) 
 	"excerpt":    excerptFunc,
 	"title":      titleFunc,
 	"content":    contentFunc,
+	"tagline":    taglineFunc,
 	"post_class": post_classFunc,
 	"featured":   featuredFunc,
 	"id":         idFunc,
