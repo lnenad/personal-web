@@ -3,9 +3,10 @@
 package plugins
 
 import (
-	"github.com/kabukky/journey/structure"
-	"github.com/yuin/gopher-lua"
 	"sync"
+
+	"github.com/lnenad/personal-web/structure"
+	"github.com/yuin/gopher-lua"
 )
 
 // Global LState pool

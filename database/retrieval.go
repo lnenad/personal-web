@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/kabukky/journey/structure"
+	"github.com/lnenad/personal-web/structure"
 )
 
 const stmtRetrievePostsCount = "SELECT count(*) FROM posts WHERE page = 0 AND status = 'published'"

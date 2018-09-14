@@ -3,11 +3,11 @@ package database
 import (
 	"database/sql"
 
-	"github.com/kabukky/journey/database/migration"
-	"github.com/kabukky/journey/date"
-	"github.com/kabukky/journey/filenames"
-	"github.com/kabukky/journey/helpers"
-	"github.com/kabukky/journey/structure"
+	"github.com/lnenad/personal-web/database/migration"
+	"github.com/lnenad/personal-web/date"
+	"github.com/lnenad/personal-web/filenames"
+	"github.com/lnenad/personal-web/helpers"
+	"github.com/lnenad/personal-web/structure"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/satori/go.uuid"
 )

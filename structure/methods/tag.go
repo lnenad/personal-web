@@ -1,9 +1,10 @@
 package methods
 
 import (
-	"github.com/kabukky/journey/slug"
-	"github.com/kabukky/journey/structure"
 	"strings"
+
+	"github.com/lnenad/personal-web/slug"
+	"github.com/lnenad/personal-web/structure"
 )
 
 func GenerateTagsFromCommaString(input string) []structure.Tag {

@@ -3,9 +3,9 @@ package methods
 import (
 	"log"
 
-	"github.com/kabukky/journey/database"
-	"github.com/kabukky/journey/date"
-	"github.com/kabukky/journey/structure"
+	"github.com/lnenad/personal-web/database"
+	"github.com/lnenad/personal-web/date"
+	"github.com/lnenad/personal-web/structure"
 )
 
 func SavePost(p *structure.Post) error {

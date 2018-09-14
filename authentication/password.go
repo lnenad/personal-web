@@ -1,7 +1,7 @@
 package authentication
 
 import (
-	"github.com/kabukky/journey/database"
+	"github.com/lnenad/personal-web/database"
 	"golang.org/x/crypto/bcrypt"
 )
 

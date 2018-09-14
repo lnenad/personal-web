@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/kabukky/journey/configuration"
-	"github.com/kabukky/journey/filenames"
+	"github.com/lnenad/personal-web/configuration"
+	"github.com/lnenad/personal-web/filenames"
 	"golang.org/x/crypto/acme/autocert"
 )
 

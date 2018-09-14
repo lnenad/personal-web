@@ -8,12 +8,12 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/kabukky/journey/conversion"
-	"github.com/kabukky/journey/database"
-	"github.com/kabukky/journey/date"
-	"github.com/kabukky/journey/plugins"
-	"github.com/kabukky/journey/structure"
-	"github.com/kabukky/journey/structure/methods"
+	"github.com/lnenad/personal-web/conversion"
+	"github.com/lnenad/personal-web/database"
+	"github.com/lnenad/personal-web/date"
+	"github.com/lnenad/personal-web/plugins"
+	"github.com/lnenad/personal-web/structure"
+	"github.com/lnenad/personal-web/structure/methods"
 )
 
 // Helper fuctions

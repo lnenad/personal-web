@@ -2,12 +2,13 @@ package methods
 
 import (
 	"encoding/json"
-	"github.com/kabukky/journey/configuration"
-	"github.com/kabukky/journey/database"
-	"github.com/kabukky/journey/date"
-	"github.com/kabukky/journey/slug"
-	"github.com/kabukky/journey/structure"
 	"log"
+
+	"github.com/lnenad/personal-web/configuration"
+	"github.com/lnenad/personal-web/database"
+	"github.com/lnenad/personal-web/date"
+	"github.com/lnenad/personal-web/slug"
+	"github.com/lnenad/personal-web/structure"
 )
 
 // Global blog - thread safe and accessible by all requests

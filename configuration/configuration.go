@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/kabukky/journey/filenames"
+	"github.com/lnenad/personal-web/filenames"
 )
 
 // Configuration: settings that are neccesary for server configuration
