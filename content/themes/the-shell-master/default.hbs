@@ -36,6 +36,7 @@
         <div class="inner">
              <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
              <section class="poweredby">Base theme <a href="https://github.com/mityalebedev/The-Shell">Ghost in The Shell</a>. Powered by a modified version of <a href="https://kabukky.github.io/journey/">Journey</a></section>
+             <section class="info">Github <a href="https://github.com/lnenad">lnenad</a>. LinkedIn <a href="https://www.linkedin.com/nenadlukic">nenadlukic</a></section>
         </div>
     </footer>
 
@@ -55,7 +56,7 @@
             m=f.getElementsByTagName('script')[0];
             o.async=1; o.src=t; o.id='fathom-script';
             m.parentNode.insertBefore(o,m)
-        })(document, window, 'http://localhost:8080/tracker.js', 'fathom');
+        })(document, window, 'http://' + window.location.host + ':8080/tracker.js', 'fathom');
         fathom('trackPageview');
     </script>
 </body>

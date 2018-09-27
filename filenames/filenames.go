@@ -18,14 +18,15 @@ var (
 	AssetPath = determineAssetPath()
 
 	// For assets that are created, changed, our user-provided while running journey
-	ConfigFilename   = filepath.Join(AssetPath, "config.json")
-	ContentFilepath  = filepath.Join(AssetPath, "content")
-	DatabaseFilepath = filepath.Join(ContentFilepath, "data")
-	DatabaseFilename = filepath.Join(ContentFilepath, "data", "journey.db")
-	ThemesFilepath   = filepath.Join(ContentFilepath, "themes")
-	ImagesFilepath   = filepath.Join(ContentFilepath, "images")
-	PluginsFilepath  = filepath.Join(ContentFilepath, "plugins")
-	PagesFilepath    = filepath.Join(ContentFilepath, "pages")
+	ConfigFilename    = filepath.Join(AssetPath, "config.json")
+	ContentFilepath   = filepath.Join(AssetPath, "content")
+	DatabaseFilepath  = filepath.Join(ContentFilepath, "data")
+	DatabaseFilename  = filepath.Join(ContentFilepath, "data", "journey.db")
+	ThemesFilepath    = filepath.Join(ContentFilepath, "themes")
+	ImagesFilepath    = filepath.Join(ContentFilepath, "images")
+	PluginsFilepath   = filepath.Join(ContentFilepath, "plugins")
+	PagesFilepath     = filepath.Join(ContentFilepath, "pages")
+	WellKnownFilepath = filepath.Join(ContentFilepath, "../.well-known")
 
 	// For https
 	HttpsFilepath     = filepath.Join(ContentFilepath, "https")
